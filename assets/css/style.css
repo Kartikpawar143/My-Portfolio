@@ -1937,3 +1937,50 @@ textarea.form-input {
   pointer-events: none;
   z-index: 99999999; /* so that it stays on top of all other elements */
 }
+
+.typing-text {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid var(--primary-color); /* Cursor Effect */
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  width: 0;
+  animation: typing 4s steps(50, end) forwards, blink 0.6s infinite;
+  animation-delay: 1s; /* Delay before it starts */
+}
+
+.typing-text {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #ffcc00; /* Yellow Cursor Effect */
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-image: linear-gradient(90deg, #ffcc00, #ff9900); /* Yellow to Gold Gradient */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  width: 0;
+  animation: typing 6s steps(50, end) infinite, blink 0.6s infinite;
+  text-shadow: 0px 0px 8px rgba(255, 204, 0, 0.6); /* Soft Glow */
+}
+
+/* Typing Effect with pauses */
+@keyframes typing {
+  0% { width: 0; }
+  40% { width: 100%; } /* Text fully appears */
+  50% { width: 100%; } /* Hold full text */
+  90% { width: 0; } /* Fade out effect */
+  100% { width: 0; } /* Reset */
+}
+
+/* Blinking Cursor Effect */
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+/* Smooth fade-in and fade-out */
+.typing-text {
+  animation: typing 6s steps(50, end) infinite, blink 0.6s infinite;
+}
