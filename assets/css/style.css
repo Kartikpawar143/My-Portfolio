@@ -1085,7 +1085,7 @@ main {
 
 
 /*-----------------------------------*\
-  #CONTACT
+  #CONTACT - ENHANCED STYLING
 \*-----------------------------------*/
 
 .mapbox {
@@ -1096,9 +1096,12 @@ main {
   margin-bottom: 30px;
   border: 1px solid var(--jet);
   overflow: hidden;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-.mapbox figure { height: 100%; }
+.mapbox figure {
+  height: 100%;
+}
 
 .mapbox iframe {
   width: 100%;
@@ -1107,9 +1110,21 @@ main {
   filter: grayscale(1) invert(1);
 }
 
-.contact-form { margin-bottom: 10px; }
+.contact-form {
+  background: linear-gradient(135deg, rgba(36, 36, 36, 0.8), rgba(25, 25, 25, 0.9));
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+}
 
-.form-title { margin-bottom: 20px; }
+.form-title {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--orange-yellow-crayola);
+}
 
 .input-wrapper {
   display: grid;
@@ -1126,11 +1141,26 @@ main {
   border: 1px solid var(--jet);
   border-radius: 14px;
   outline: none;
+  background: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease-in-out;
 }
 
-.form-input::placeholder { font-weight: var(--fw-500); }
+.form-input::placeholder {
+  font-weight: var(--fw-500);
+  opacity: 0.7;
+  transition: all 0.3s ease-in-out;
+}
 
-.form-input:focus { border-color: var(--orange-yellow-crayola); }
+.form-input:focus {
+  border-color: var(--orange-yellow-crayola);
+  box-shadow: 0px 0px 10px rgba(255, 165, 0, 0.5);
+}
+
+.form-input:focus::placeholder {
+  transform: translateY(-20px);
+  font-size: 0.8rem;
+  opacity: 0.5;
+}
 
 textarea.form-input {
   min-height: 100px;
@@ -1140,10 +1170,7 @@ textarea.form-input {
   margin-bottom: 25px;
 }
 
-textarea.form-input::-webkit-resizer { display: none; }
-
-.form-input:focus:invalid { border-color: var(--bittersweet-shimmer); }
-
+/* Animated Send Button */
 .form-btn {
   position: relative;
   width: 100%;
@@ -1159,7 +1186,8 @@ textarea.form-input::-webkit-resizer { display: none; }
   text-transform: capitalize;
   box-shadow: var(--shadow-3);
   z-index: 1;
-  transition: var(--transition-1);
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
 }
 
 .form-btn::before {
@@ -1169,26 +1197,56 @@ textarea.form-input::-webkit-resizer { display: none; }
   background: var(--bg-gradient-jet);
   border-radius: inherit;
   z-index: -1;
-  transition: var(--transition-1);
+  transition: all 0.3s ease-in-out;
 }
 
-.form-btn ion-icon { font-size: 16px; }
+.form-btn:hover {
+  background: var(--bg-gradient-yellow-1);
+  transform: translateY(-2px);
+  box-shadow: 0px 10px 20px rgba(255, 165, 0, 0.3);
+}
 
-.form-btn:hover { background: var(--bg-gradient-yellow-1); }
+.form-btn:hover::before {
+  background: var(--bg-gradient-yellow-2);
+}
 
-.form-btn:hover::before { background: var(--bg-gradient-yellow-2); }
+/* Spinner Animation for Button */
+.spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid transparent;
+  border-top: 2px solid var(--white-2);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  display: none;
+}
 
+.form-btn.loading .btn-text {
+  display: none;
+}
+
+.form-btn.loading .spinner {
+  display: inline-block;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Disabled Button */
 .form-btn:disabled {
   opacity: 0.7;
   cursor: not-allowed;
 }
 
-.form-btn:disabled:hover { background: var(--border-gradient-onyx); }
+.form-btn:disabled:hover {
+  background: var(--border-gradient-onyx);
+}
 
-.form-btn:disabled:hover::before { background: var(--bg-gradient-jet); }
-
-
-
+.form-btn:disabled:hover::before {
+  background: var(--bg-gradient-jet);
+}
 
 
 /*-----------------------------------*\
