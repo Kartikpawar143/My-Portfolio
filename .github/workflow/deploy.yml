@@ -1,0 +1,25 @@
+name: Deploy Website to S3
+
+on:
+  push:
+    branches:
+      - main  # Runs when pushing to the 'main' branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4  # This checks out your code so GitHub Actions can deploy it
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v3
+        with:
+          aws-access-key-id: AKIAQLVQQ5KS4BU3W262  # Your AWS Access Key ID
+          aws-secret-access-key: L0BBU/Y32JewNTT29FuZMQnlTXFIulzDWsfwY9Uv  # Your AWS Secret Access Key
+          aws-region: ap-south-1  # AWS region (Mumbai)
+
+      - name: Deploy to S3
+        run: |
+          aws s3 sync . s3://my-awesome-bucket --delete --exclude ".git/*" --exclude ".github/*"  # Deploy code to your S3 bucket
