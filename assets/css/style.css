@@ -937,7 +937,7 @@ main {
 
 
 /*-----------------------------------*\
-  #PORTFOLIO
+  #PROJECTS
 \*-----------------------------------*/
 
 .filter-list { display: none; }
@@ -1293,7 +1293,7 @@ textarea.form-input {
 
 
   /**
-   * #PORTFOLIO, BLOG 
+   * #PROJECTS, BLOG 
    */
 
   .project-img,
@@ -1552,7 +1552,7 @@ textarea.form-input {
 
 
   /**
-   * #PORTFOLIO, BLOG
+   * #PROJECTS, BLOG
    */
 
   .project-img, .blog-banner-box { border-radius: 16px; }
@@ -1645,7 +1645,7 @@ textarea.form-input {
 
 
   /**
-   * PORTFOLIO
+   * PROJECTS
    */
 
    
@@ -1673,7 +1673,7 @@ textarea.form-input {
 
   .filter-item button.active { color: var(--orange-yellow-crayola); }
 
-  /* portfolio and blog grid */
+  /* projects and blog grid */
 
   .project-list, .blog-posts-list { grid-template-columns: 1fr 1fr; }
 
@@ -1793,7 +1793,7 @@ textarea.form-input {
 
 
   /**
-   * PORTFOLIO
+   * PROJECTS
    */
 
   .project-list { grid-template-columns: repeat(3, 1fr); }
