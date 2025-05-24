@@ -292,7 +292,39 @@ article.active {
   z-index: -1;
 }
 
+.glass-bg {
+  /* ...existing glass-bg styles... */
+  opacity: 0;
+  transform: translateY(40px) scale(0.98);
+  animation: glassFadeIn 1.2s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
 
+@keyframes glassFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Card/project hover animation */
+.card, .project, .blog {
+  /* ...existing styles... */
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.card:hover, .project:hover, .blog:hover {
+  box-shadow: 0 12px 36px rgba(44,83,100,0.22);
+  transform: translateY(-8px) scale(1.03);
+}
+
+/* Button hover pop effect */
+button, .btn {
+  /* ...existing styles... */
+  transition: background 0.2s, transform 0.2s;
+}
+button:hover, .btn:hover {
+  /* ...existing styles... */
+  transform: translateY(-2px) scale(1.08);
+}
 
 
 
@@ -2275,6 +2307,24 @@ textarea.form-input {
   --y: 0.5;
   top: 70%;
   right: 60%;
+}
+.card-particles span:nth-child(7) {
+  --x: 0.7;
+  --y: -0.7;
+  top: 50%;
+  left: 10%;
+}
+.card-particles span:nth-child(8) {
+  --x: -0.7;
+  --y: -0.7;
+  top: 50%;
+  right: 10%;
+}
+.card-particles span:nth-child(9) {
+  --x: 0.3;
+  --y: 0.8;
+  top: 20%;
+  left: 70%;
 }
 
 #card::before {
