@@ -203,3 +203,69 @@ function animateCircles() {
 }
 
 animateCircles();
+
+
+// === Chatbot Functionality ===
+const chatbotContainer = document.getElementById('chatbot-container');
+const chatbotToggle = document.getElementById('chatbot-toggle');
+const chatbotClose = document.getElementById('chatbot-close');
+const chatbotForm = document.getElementById('chatbot-form');
+const chatbotInput = document.getElementById('chatbot-input');
+const chatbotMessages = document.getElementById('chatbot-messages');
+
+// Show/hide chatbot
+chatbotToggle.addEventListener('click', () => {
+  chatbotContainer.style.display = 'flex';
+  chatbotToggle.style.display = 'none';
+});
+chatbotClose.addEventListener('click', () => {
+  chatbotContainer.style.display = 'none';
+  chatbotToggle.style.display = 'flex';
+});
+
+// Add message to chat window
+function addMessage(text, sender = 'bot') {
+  const msg = document.createElement('div');
+  msg.className = `chatbot-msg ${sender}`;
+  msg.textContent = text;
+  chatbotMessages.appendChild(msg);
+  chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+}
+
+// === Chatbot Portfolio Access & Custom Greeting ===
+function getBotResponse(userMsg) {
+  const msg = userMsg.toLowerCase();
+  if (msg.includes('hello') || msg.includes('hi')) return 'Hello! 👋 You can chat with me about my portfolio, skills, experience, education, or projects.';
+  if (msg.includes('portfolio')) return 'You are viewing my portfolio! Ask me about my skills, experience, education, or projects.';
+  if (msg.includes('contact')) return 'You can use the contact form below or ask me anything here!';
+  if (msg.includes('project')) return 'Here are some of my projects: <br>- AWS S3 <br>- Django Notes App <br>- Expenses Tracker WebApp <br>- Two Tier Flask App <br>- Auto Scaling <br>...and more! Ask for details about any project.';
+  if (msg.includes('skill')) return 'My skills include Web Development, DevOps, AWS Cloud, Linux, Shell-Scripting, and more.';
+  if (msg.includes('experience')) return 'I have interned at Borgward Technology India and Coding Saavy, working on DevOps, AWS, and Web Development.';
+  if (msg.includes('education')) return 'I am pursuing BE in Information Technology at Savitribai Phule Pune University.';
+  if (msg.includes('resume') || msg.includes('cv')) return 'You can download my resume from the Resume section or <a href="assets/resume/Kartik_Pawar_IT.pdf" target="_blank">click here</a>.';
+  if (msg.includes('about')) return 'I am Kartik Pawar, passionate about continuous learning, innovation, and problem-solving in IT.';
+  if (msg.includes('chat') || msg.includes('talk')) return 'Yes, you can chat with me! Ask me anything about my portfolio or just say hi.';
+  if (msg.includes('send')) return 'Sure! If you want to send a message, just type it below and press Send.';
+  return "I'm your portfolio assistant! Ask me about my skills, experience, education, projects, or how to contact me.";
+}
+
+// Handle form submit
+chatbotForm.addEventListener('submit', function(e) {
+  e.preventDefault();
+  const userMsg = chatbotInput.value.trim();
+  if (!userMsg) return;
+  addMessage(userMsg, 'user');
+  chatbotInput.value = '';
+  setTimeout(() => {
+    addMessage(getBotResponse(userMsg), 'bot');
+  }, 600);
+});
+
+// Greet on open
+chatbotToggle.addEventListener('click', () => {
+  if (!chatbotMessages.hasChildNodes()) {
+    setTimeout(() => {
+      addMessage('Hi! I am your portfolio assistant 🤖. How can I help you?','bot');
+    }, 400);
+  }
+});

@@ -27,6 +27,8 @@
 
 <body>
 
+  <div id="particles-js"></div>
+
   <!--
     - #MAIN
   -->
@@ -6100,6 +6102,21 @@
 
   </main>
   
+  <!-- Chatbot Widget -->
+  <div id="chatbot-container">
+    <div id="chatbot-header">
+      <span>Chat with Me!</span>
+      <button id="chatbot-close">×</button>
+    </div>
+    <div id="chatbot-messages"></div>
+    <form id="chatbot-form">
+      <input type="text" id="chatbot-input" placeholder="Type your message..." autocomplete="off" required />
+      <button type="submit">Send</button>
+    </form>
+  </div>
+  <button id="chatbot-toggle"><ion-icon name="chatbubble-ellipses-outline"></ion-icon></button>
+  <!-- End Chatbot Widget -->
+
   <!--Cursor-->
   <div class="circle"></div>
   <div class="circle"></div>
@@ -6124,6 +6141,7 @@
 
 
   <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+  <script src="./assets/js/init-particles.js"></script>
 <div id="particles-js"></div>
 
   <!--
