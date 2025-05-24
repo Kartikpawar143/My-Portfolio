@@ -424,6 +424,35 @@
     </ul>
   </section>
 
+  <script>
+    // Animate skill bars on resume page activation
+    document.addEventListener('DOMContentLoaded', function () {
+      function animateSkillBars() {
+        const skillSection = document.querySelector('.resume.active .skill, .resume .skill');
+        if (!skillSection) return;
+        const bars = skillSection.querySelectorAll('.skill-progress-fill');
+        bars.forEach(bar => {
+          const targetWidth = bar.style.width;
+          bar.style.width = '0';
+          setTimeout(() => {
+            bar.style.transition = 'width 1.2s cubic-bezier(0.23, 1, 0.32, 1)';
+            bar.style.width = targetWidth;
+          }, 200);
+        });
+      }
+      // Animate on load if resume is active
+      if (document.querySelector('.resume.active')) animateSkillBars();
+      // Animate on navigation to resume
+      document.querySelectorAll('[data-nav-link]').forEach(link => {
+        link.addEventListener('click', function () {
+          if (this.textContent.trim().toLowerCase() === 'resume') {
+            setTimeout(animateSkillBars, 350);
+          }
+        });
+      });
+    });
+  </script>
+
   <!-- Download CV Button -->
 <div class="download-container">
   <a href="assets/resume/Kartik_Pawar_IT.pdf" download class="download-btn">
