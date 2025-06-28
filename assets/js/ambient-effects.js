@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const symbols = ['<', '>', '{', '}', '(', ')', '[', ']', '/', '*', '+', '-', '=', ';', ':', '.', ','];
         
-        for (let i = 0; i < 60; i++) {
+        for (let i = 0; i < 25; i++) {
             const symbol = document.createElement('div');
             symbol.className = 'code-symbol';
             symbol.textContent = symbols[Math.floor(Math.random() * symbols.length)];
