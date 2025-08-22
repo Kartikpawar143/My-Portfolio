@@ -112,6 +112,11 @@
           <ion-icon name="logo-instagram"></ion-icon>
         </a>
       </li>
+      <li class="social-item">
+        <a href="https://www.credly.com/users/kartikpawar/badges#credly" class="social-link" title="Credly Profile">
+          <ion-icon name="ribbon-outline"></ion-icon>
+        </a>
+      </li>
     </ul>
   </div>
 </aside>
@@ -135,6 +140,9 @@
     </li>
     <li class="navbar-item">
       <button class="navbar-link" data-nav-link>Resume</button>
+    </li>
+    <li class="navbar-item">
+      <button class="navbar-link" data-nav-link>Certifications</button>
     </li>
     <li class="navbar-item">
       <button class="navbar-link" data-nav-link>Projects</button>
@@ -311,14 +319,14 @@
 
     <ol class="timeline-list">
       <li class="timeline-item">
-        <h4 class="h4 timeline-item-title">Borgward Technology India Private Limited</h4>
-        <span>Aug 2024 — Jan 2025</span>
-        <p class="timeline-text">Internship on Cloud DevOps, Linux, Shell-Scripting.</p>
-      </li>
-      <li class="timeline-item">
         <h4 class="h4 timeline-item-title">Coding Saavy</h4>
         <span>Dec 2024 — Jan 2025</span>
         <p class="timeline-text">Internship on Web development.</p>
+      </li>
+      <li class="timeline-item">
+        <h4 class="h4 timeline-item-title">Borgward Technology India Private Limited</h4>
+        <span>Aug 2024 — Jan 2025</span>
+        <p class="timeline-text">Internship on Cloud DevOps, Linux, Shell-Scripting.</p>
       </li>
     </ol>
   </section>
@@ -447,7 +455,85 @@
 </article>
 
 
+ <!--
+        - #CERTIFICATIONS
+      -->
 
+      <article class="certifications" data-page="certifications">
+
+        <header>
+          <h2 class="h2 article-title">Certifications</h2>
+        </header>
+
+        <section class="certifications-content">
+          
+          <div class="certification-list">
+            
+            <div class="certification-item">
+              <div class="certification-image-box">
+                <img src="./assets/images/certificates/OpenTofu.png" alt="OpenTofu Certificate" class="certification-img">
+              </div>
+              <div class="certification-content-box">
+                <h4 class="h4 certification-item-title">OpenTofu</h4>
+                <p class="certification-issuer">Linux Foundation</p>
+                <p class="certification-date">Completed: July 07, 2025</p>
+                <p class="certification-description">
+                  Infrastructure as Code (IaC) using OpenTofu, an open-source alternative to Terraform. 
+                  Covers resource provisioning, state management, modules, and infrastructure automation.
+                </p>
+                <div class="certification-badge">
+                  <span class="badge">Infrastructure as Code</span>
+                  <span class="badge">OpenTofu</span>
+                  <span class="badge">Cloud Infrastructure</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="certification-item">
+              <div class="certification-image-box">
+                <img src="./assets/images/certificates/Introduction to GitOps.png" alt="Introduction to GitOps Certificate" class="certification-img">
+              </div>
+              <div class="certification-content-box">
+                <h4 class="h4 certification-item-title">Introduction to GitOps</h4>
+                <p class="certification-issuer">Linux Foundation</p>
+                <p class="certification-date">Completed: July 21, 2025</p>
+                <p class="certification-description">
+                  Comprehensive introduction to GitOps principles and practices. Covers declarative infrastructure, 
+                  version control workflows, continuous deployment, and automated operations using Git as the single source of truth.
+                </p>
+                <div class="certification-badge">
+                  <span class="badge">GitOps</span>
+                  <span class="badge">DevOps</span>
+                  <span class="badge">CI/CD</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="certification-item">
+              <div class="certification-image-box">
+                <img src="./assets/images/certificates/Introduction To Linux.png" alt="Introduction To Linux Certificate" class="certification-img">
+              </div>
+              <div class="certification-content-box">
+                <h4 class="h4 certification-item-title">Introduction To Linux</h4>
+                <p class="certification-issuer">Linux Foundation</p>
+                <p class="certification-date">Completed: August 06, 2025</p>
+                <p class="certification-description">
+                  Foundational knowledge of Linux operating system including command line operations, file systems, 
+                  process management, user administration, and shell scripting fundamentals.
+                </p>
+                <div class="certification-badge">
+                  <span class="badge">Linux</span>
+                  <span class="badge">System Administration</span>
+                  <span class="badge">Command Line</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          
+        </section>
+
+      </article>
 
 
  <!--
@@ -8073,6 +8159,52 @@
   <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
   <script src="./assets/js/init-particles.js"></script>
 <div id="particles-js"></div>
+
+  <!-- Certificate Modal -->
+  <div id="certificateModal" class="certificate-modal">
+    <span class="certificate-close">&times;</span>
+    <div class="certificate-modal-content">
+      <img id="modalCertificateImg" src="" alt="Certificate">
+    </div>
+  </div>
+
+  <script>
+    // Certificate Modal Functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const modal = document.getElementById('certificateModal');
+      const modalImg = document.getElementById('modalCertificateImg');
+      const closeBtn = document.querySelector('.certificate-close');
+      const certImages = document.querySelectorAll('.certification-img');
+
+      // Add click event to all certificate images
+      certImages.forEach(img => {
+        img.addEventListener('click', function() {
+          modal.style.display = 'block';
+          modalImg.src = this.src;
+          modalImg.alt = this.alt;
+        });
+      });
+
+      // Close modal when clicking the close button
+      closeBtn.addEventListener('click', function() {
+        modal.style.display = 'none';
+      });
+
+      // Close modal when clicking outside the image
+      modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+          modal.style.display = 'none';
+        }
+      });
+
+      // Close modal with Escape key
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modal.style.display === 'block') {
+          modal.style.display = 'none';
+        }
+      });
+    });
+  </script>
 
   <!--
     - custom js link
