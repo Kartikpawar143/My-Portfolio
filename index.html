@@ -23,6 +23,142 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!--
+    - service icon styles
+  -->
+  <style>
+    .service-icon-box ion-icon {
+      font-size: 40px;
+      width: 40px;
+      height: 40px;
+      color: var(--orange-yellow-crayola, #ffdb70);
+    }
+
+    /* 3D Design Element */
+    .education-container {
+      display: flex;
+      align-items: flex-start;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .education-content {
+      flex: 1;
+    }
+
+    .resume-3d-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      perspective: 1000px;
+      position: relative;
+      min-width: 200px;
+      height: 200px;
+    }
+
+    .cube-3d {
+      width: 100px;
+      height: 100px;
+      position: relative;
+      transform-style: preserve-3d;
+      animation: rotateCube 8s infinite linear;
+    }
+
+    .cube-face {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      border: 2px solid var(--orange-yellow-crayola, #ffdb70);
+      background: linear-gradient(135deg, rgba(255, 219, 112, 0.1), rgba(255, 219, 112, 0.3));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      color: var(--orange-yellow-crayola, #ffdb70);
+      backdrop-filter: blur(10px);
+    }
+
+    .cube-face.front { transform: rotateY(0deg) translateZ(50px); }
+    .cube-face.back { transform: rotateY(180deg) translateZ(50px); }
+    .cube-face.right { transform: rotateY(90deg) translateZ(50px); }
+    .cube-face.left { transform: rotateY(-90deg) translateZ(50px); }
+    .cube-face.top { transform: rotateX(90deg) translateZ(50px); }
+    .cube-face.bottom { transform: rotateX(-90deg) translateZ(50px); }
+
+    @keyframes rotateCube {
+      0% { transform: rotateX(0deg) rotateY(0deg); }
+      25% { transform: rotateX(90deg) rotateY(90deg); }
+      50% { transform: rotateX(180deg) rotateY(180deg); }
+      75% { transform: rotateX(270deg) rotateY(270deg); }
+      100% { transform: rotateX(360deg) rotateY(360deg); }
+    }
+
+    .floating-elements {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      pointer-events: none;
+    }
+
+    .floating-dot {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background: var(--orange-yellow-crayola, #ffdb70);
+      border-radius: 50%;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .floating-dot:nth-child(1) { top: 20%; left: 10%; animation-delay: 0s; }
+    .floating-dot:nth-child(2) { top: 60%; left: 80%; animation-delay: 1s; }
+    .floating-dot:nth-child(3) { top: 80%; left: 20%; animation-delay: 2s; }
+    .floating-dot:nth-child(4) { top: 30%; left: 70%; animation-delay: 3s; }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px) scale(1); opacity: 0.7; }
+      50% { transform: translateY(-20px) scale(1.2); opacity: 1; }
+    }
+
+    @media (max-width: 768px) {
+      .education-container {
+        flex-direction: column;
+        gap: 20px;
+      }
+      
+      .resume-3d-container {
+        min-width: auto;
+        height: 150px;
+        align-self: center;
+      }
+      
+      .cube-3d { 
+        width: 80px; 
+        height: 80px; 
+      }
+      
+      .cube-face { 
+        width: 80px; 
+        height: 80px; 
+        font-size: 20px; 
+      }
+      
+      .cube-face.front, .cube-face.back, .cube-face.right, .cube-face.left, .cube-face.top, .cube-face.bottom {
+        transform-origin: center;
+      }
+      .cube-face.front { transform: rotateY(0deg) translateZ(40px); }
+      .cube-face.back { transform: rotateY(180deg) translateZ(40px); }
+      .cube-face.right { transform: rotateY(90deg) translateZ(40px); }
+      .cube-face.left { transform: rotateY(-90deg) translateZ(40px); }
+      .cube-face.top { transform: rotateX(90deg) translateZ(40px); }
+      .cube-face.bottom { transform: rotateX(-90deg) translateZ(40px); }
+      
+      .floating-elements {
+        width: 150px;
+        height: 150px;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -191,8 +327,7 @@
             <li class="service-item">
 
               <div class="service-icon-box">
-                <img src="./assets/images/icon-design.svg
-                " alt="design icon" width="40">
+                <ion-icon name="cloud-outline"></ion-icon>
               </div>
 
               <div class="service-content-box">
@@ -208,7 +343,7 @@
             <li class="service-item">
 
               <div class="service-icon-box">
-                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
+                <ion-icon name="git-branch-outline"></ion-icon>
               </div>
 
               <div class="service-content-box">
@@ -224,7 +359,7 @@
             <li class="service-item">
 
               <div class="service-icon-box">
-                <img src="./assets/images/icon-app.svg" alt="mobile app icon" width="40">
+                <ion-icon name="terminal-outline"></ion-icon>
               </div>
 
               <div class="service-content-box">
@@ -240,7 +375,7 @@
             <li class="service-item">
 
               <div class="service-icon-box">
-                <img src="./assets/images/icon-photo.svg" alt="camera icon" width="40">
+                <ion-icon name="code-slash-outline"></ion-icon>
               </div>
 
               <div class="service-content-box">
@@ -282,32 +417,54 @@
     <h2 class="h2 article-title">Resume</h2>
   </header>
 
-  <section class="timeline">
-    <div class="title-wrapper">
-      <div class="icon-box">
-        <ion-icon name="book-outline"></ion-icon>
-      </div>
-      <h3 class="h3">Education</h3>
+  <div class="education-container">
+    <div class="education-content">
+      <section class="timeline">
+        <div class="title-wrapper">
+          <div class="icon-box">
+            <ion-icon name="book-outline"></ion-icon>
+          </div>
+          <h3 class="h3">Education</h3>
+        </div>
+        
+        <ol class="timeline-list">
+          <li class="timeline-item">
+            <h4 class="h4 timeline-item-title">Savitribai Phule Pune University</h4>
+            <span>2022 — 2026</span>
+            <p class="timeline-text">Pursuing BE in Information Technology.<br> CGPA - 8.12</p>
+          </li>
+          <li class="timeline-item">
+            <h4 class="h4 timeline-item-title">Kai.Sau.G.F.Patil Arts, Science & Commerce Jr.College</h4>
+            <span>2020 — 2022</span>
+            <p class="timeline-text">Percentage - 77.83%</p>
+          </li>
+          <li class="timeline-item">
+            <h4 class="h4 timeline-item-title">Shri Mahavir English Medium School</h4>
+            <span>2020</span>
+            <p class="timeline-text">Percentage - 62%</p>
+          </li>
+        </ol>
+      </section>
     </div>
-    
-    <ol class="timeline-list">
-      <li class="timeline-item">
-        <h4 class="h4 timeline-item-title">Savitribai Phule Pune University</h4>
-        <span>2022 — 2026</span>
-        <p class="timeline-text">Pursuing BE in Information Technology.<br> CGPA - 8.12</p>
-      </li>
-      <li class="timeline-item">
-        <h4 class="h4 timeline-item-title">Kai.Sau.G.F.Patil Arts, Science & Commerce Jr.College</h4>
-        <span>2020 — 2022</span>
-        <p class="timeline-text">Percentage - 77.83%</p>
-      </li>
-      <li class="timeline-item">
-        <h4 class="h4 timeline-item-title">Shri Mahavir English Medium School</h4>
-        <span>2020</span>
-        <p class="timeline-text">Percentage - 62%</p>
-      </li>
-    </ol>
-  </section>
+
+    <!-- 3D Design Element -->
+    <div class="resume-3d-container">
+      <div class="floating-elements">
+        <div class="floating-dot"></div>
+        <div class="floating-dot"></div>
+        <div class="floating-dot"></div>
+        <div class="floating-dot"></div>
+      </div>
+      <div class="cube-3d">
+        <div class="cube-face front">📚</div>
+        <div class="cube-face back">💼</div>
+        <div class="cube-face right">🎓</div>
+        <div class="cube-face left">⚡</div>
+        <div class="cube-face top">🚀</div>
+        <div class="cube-face bottom">💡</div>
+      </div>
+    </div>
+  </div>
 
   <section class="timeline">
     <div class="title-wrapper">
