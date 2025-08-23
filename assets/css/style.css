@@ -578,6 +578,17 @@ main {
   .navbar-link i {
     font-size: 18px;
   }
+  
+  /* Disable hover effect and cursor for service icons on mobile */
+  .service-icon-box:hover {
+    transform: none;
+    transition: none;
+  }
+  
+  .service-icon-box,
+  .service-item {
+    cursor: default;
+  }
 }
 
 
@@ -3291,6 +3302,17 @@ textarea.form-input {
   
   .certification-badge {
     justify-content: center;
+  }
+  
+  /* Disable hover effect and cursor for service icons on mobile/tablet */
+  .service-icon-box:hover {
+    transform: none;
+    transition: none;
+  }
+  
+  .service-icon-box,
+  .service-item {
+    cursor: default;
   }
 }
 
