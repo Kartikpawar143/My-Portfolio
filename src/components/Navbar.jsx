@@ -1,0 +1,26 @@
+function Navbar({ activePage, setActivePage }) {
+    const pages = ["about", "resume", "certifications", "projects", "blog", "contact"];
+  
+    return (
+      <nav className="navbar">
+        <ul className="navbar-list">
+          {pages.map((page) => (
+            <li key={page} className="navbar-item">
+              <button
+                className={
+                  activePage === page
+                    ? "navbar-link active"
+                    : "navbar-link"
+                }
+                onClick={() => setActivePage(page)}
+              >
+                {page.charAt(0).toUpperCase() + page.slice(1)}
+              </button>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    );
+  }
+  
+  export default Navbar;
