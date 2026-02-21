@@ -25,7 +25,7 @@ function Projects({ active }) {
       link: "https://github.com/Kartikpawar143/Full-Stack-ChatApp.git",
       subtitle1: "Kubernetes Chat Application",
       subtitle2: "Kubernetes",
-      category: "kubernetes",
+      category: "cloud",
     },
     {
       title: "Core Java",
@@ -33,21 +33,21 @@ function Projects({ active }) {
         "https://github.com/Kartikpawar143/Coding-Related/tree/main/Core%20Java%20codes",
       subtitle1: "Java",
       subtitle2: "Project",
-      category: "java",
+      category: "coding",
     },
     {
       title: "Django Notes App",
       link: "https://github.com/Kartikpawar143/Django-notes-app",
       subtitle1: "Django Notes App",
       subtitle2: "Docker",
-      category: "docker",
+      category: "devops",
     },
     {
       title: "Static Website Hosting",
       link: "https://github.com/Kartikpawar143/AWS-S3",
       subtitle1: "AWS-S3",
       subtitle2: "AWS",
-      category: "aws",
+      category: "cloud",
     },
   ];
 
@@ -64,13 +64,19 @@ function Projects({ active }) {
 
       {/* Filter Buttons */}
       <div className="project-filters">
-        {["all", "aws", "devops", "web", "kubernetes"].map((cat) => (
+        {[
+          { key: "all", label: "ALL" },
+          { key: "cloud", label: "Cloud" },
+          { key: "devops", label: "DevOps" },
+          { key: "web", label: "Web Development" },
+          { key: "coding", label: "Coding" }
+        ].map((cat) => (
           <button
-            key={cat}
-            className={filter === cat ? "active" : ""}
-            onClick={() => setFilter(cat)}
+            key={cat.key}
+            className={filter === cat.key ? "active" : ""}
+            onClick={() => setFilter(cat.key)}
           >
-            {cat.toUpperCase()}
+            {cat.label}
           </button>
         ))}
       </div>
