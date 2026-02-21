@@ -19,7 +19,7 @@ function Resume({ active }) {
   const skills = [
     { name: "Web Development & Coding", width: "65%" },
     { name: "DevOps", width: "80%" },
-    { name: "AWS Cloud", width: "90%" },
+    { name: "Cloud", width: "90%" },
     { name: "Linux & Shell-Scripting", width: "75%" },
   ];
 
@@ -32,7 +32,9 @@ function Resume({ active }) {
       {/* Education */}
       <section className="timeline">
         <div className="title-wrapper">
-          <div className="icon-box">📘</div>
+          <div className="icon-box">
+            <ion-icon name="book-outline"></ion-icon>
+          </div>
           <h3 className="h3">Education</h3>
         </div>
 
@@ -43,7 +45,7 @@ function Resume({ active }) {
             </h4>
             <span>2022 — 2026</span>
             <p className="timeline-text">
-              Pursuing BE in Information Technology.<br />CGPA - 8.12
+              Pursuing BE in Information Technology.<br />CGPA - 8.90
             </p>
           </li>
 
@@ -68,7 +70,9 @@ function Resume({ active }) {
       {/* Experience */}
       <section className="timeline">
         <div className="title-wrapper">
-          <div className="icon-box">💼</div>
+          <div className="icon-box">
+            <ion-icon name="briefcase-outline"></ion-icon>
+          </div>
           <h3 className="h3">Experience</h3>
         </div>
 
@@ -108,7 +112,7 @@ function Resume({ active }) {
             <li key={index} className="skills-item">
               <div className="title-wrapper">
                 <h5 className="h5">{skill.name}</h5>
-                <span>{skill.width}</span>
+
               </div>
               <div className="skill-progress-bg">
                 <div
@@ -129,7 +133,7 @@ function Resume({ active }) {
     download
     className="download-btn"
   >
-    ⬇ Download CV
+    <ion-icon name="download-outline"></ion-icon> Download CV
   </a>
 </div>
     </article>

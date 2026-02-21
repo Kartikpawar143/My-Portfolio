@@ -852,8 +852,8 @@ main {
   background-clip: text;
 }
 
-.skill .title-wrapper data {
-  color: var(--light-gray);
+.skill .title-wrapper span {
+  color: var(--orange-yellow-crayola);
   font-size: var(--fs-7);
   font-weight: var(--fw-300);
 }
