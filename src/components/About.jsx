@@ -7,7 +7,7 @@ function About() {
   
         <section className="about-text">
           <p>
-            <span className="typing-text">AWS and DevOps Engineer</span>
+            <span className="typing-text">Cloud and DevOps Engineer</span>
           </p>
   
           <p>
@@ -38,10 +38,10 @@ function About() {
               </div>
   
               <div className="service-content-box">
-                <h4 className="h4 service-item-title">AWS Services</h4>
+                <h4 className="h4 service-item-title">Cloud Services</h4>
                 <p className="service-item-text">
                   Offers pay-as-you-go services for compute, storage, databases,
-                  AI, ML, IoT, and more.
+                  AI, ML, IoT, and more across AWS and Azure platforms.
                 </p>
               </div>
             </li>

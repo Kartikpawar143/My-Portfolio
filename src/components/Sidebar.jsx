@@ -24,6 +24,7 @@ function Sidebar() {
           onClick={() => setShowContacts(!showContacts)}
         >
           <span>{showContacts ? "Hide Contacts" : "Show Contacts"}</span>
+          <ion-icon name={showContacts ? "chevron-up" : "chevron-down"}></ion-icon>
         </button>
       </div>
 
@@ -32,7 +33,9 @@ function Sidebar() {
 
         <ul className="contacts-list">
           <li className="contact-item">
-            <div className="icon-box">📧</div>
+            <div className="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
             <div className="contact-info">
               <p className="contact-title">Email</p>
               <a
@@ -45,7 +48,9 @@ function Sidebar() {
           </li>
 
           <li className="contact-item">
-            <div className="icon-box">📱</div>
+            <div className="icon-box">
+              <ion-icon name="call-outline"></ion-icon>
+            </div>
             <div className="contact-info">
               <p className="contact-title">Phone</p>
               <a href="tel:+917887832809" className="contact-link">
@@ -55,7 +60,19 @@ function Sidebar() {
           </li>
 
           <li className="contact-item">
-            <div className="icon-box">📍</div>
+            <div className="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+            <div className="contact-info">
+              <p className="contact-title">Birthday</p>
+              <time>Sept 08, 2004</time>
+            </div>
+          </li>
+
+          <li className="contact-item">
+            <div className="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
             <div className="contact-info">
               <p className="contact-title">Location</p>
               <address>Pune, Maharashtra, India</address>
@@ -73,7 +90,7 @@ function Sidebar() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              🐱
+              <ion-icon name="logo-github"></ion-icon>
             </a>
           </li>
 
@@ -84,7 +101,7 @@ function Sidebar() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              💼
+              <ion-icon name="logo-linkedin"></ion-icon>
             </a>
           </li>
 
@@ -95,7 +112,18 @@ function Sidebar() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              📸
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li className="social-item">
+            <a
+              href="https://www.credly.com/users/kartikpawar/badges#credly"
+              className="social-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <ion-icon name="ribbon-outline"></ion-icon>
             </a>
           </li>
         </ul>

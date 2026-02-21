@@ -1872,6 +1872,29 @@ textarea.form-input {
     font-size: 18px;
   }
   
+  .info_more-btn {
+    right: 10px !important;
+    top: -15px;
+  }
+  
+  .info_more-btn span {
+    display: none;
+  }
+  
+  .info_more-btn ion-icon {
+    display: block;
+    font-size: 20px;
+  }
+  
+  .sidebar-info_more {
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  
+  .social-list {
+    display: flex !important;
+  }
+  
   .service-icon-box:hover {
     transform: none;
     transition: none;
@@ -1915,6 +1938,18 @@ textarea.form-input {
   .project-img,
   .blog-banner-box { 
     height: auto; 
+  }
+}
+
+/* Mobile social icons fix */
+@media (max-width: 767px) {
+  .sidebar-info_more {
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  
+  .social-list {
+    display: flex !important;
   }
 }
 
