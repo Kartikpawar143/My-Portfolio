@@ -117,7 +117,7 @@ function Resume({ active }) {
               <div className="skill-progress-bg">
                 <div
                   className="skill-progress-fill"
-                  data-width={skill.width}
+                  data-width= {skill.width}
                   ref={(el) => (skillRefs.current[index] = el)}
                 ></div>
               </div>
@@ -129,7 +129,7 @@ function Resume({ active }) {
       {/* Download CV */}
       <div className="download-container">
   <a
-    href="/assets/resume/Kartik_Pawar_IT.pdf"
+    href="/assets/resume/Kartik_Pawar_Resume.pdf"
     download
     className="download-btn"
   >
