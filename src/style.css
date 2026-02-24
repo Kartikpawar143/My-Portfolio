@@ -1121,7 +1121,13 @@ main {
   height: 320px;
   border-radius: 24px;
   transform-style: preserve-3d;
-  transition: transform 0.4s ease;
+  transition: transform 0.6s ease, filter 0.6s ease;
+}
+
+.project-3d-shell:hover .project-3d-card,
+.project-3d-shell:focus-within .project-3d-card {
+  transform: translateY(-4px) scale(1.01);
+  filter: saturate(1.08);
 }
 
 .project-flip-inner {
@@ -1130,13 +1136,14 @@ main {
   height: 100%;
   border-radius: 24px;
   transform-style: preserve-3d;
-  transition: transform 0.8s cubic-bezier(.4,.2,.2,1), box-shadow 0.4s ease;
+  transition: transform 1.2s cubic-bezier(0.2, 0.7, 0.2, 1), box-shadow 0.7s ease;
   box-shadow: 0 20px 45px rgba(0, 0, 0, 0.36);
 }
 
 .project-3d-shell:hover .project-flip-inner,
 .project-3d-shell:focus-within .project-flip-inner {
   transform: rotateY(180deg);
+  box-shadow: 0 28px 56px rgba(0, 0, 0, 0.48);
 }
 
 .project-face {
@@ -1333,15 +1340,19 @@ main {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .project-3d-card,
   .project-flip-inner,
   .project-link-btn,
   .project-filters button {
     transition: none;
   }
 
+  .project-3d-shell:hover .project-3d-card,
+  .project-3d-shell:focus-within .project-3d-card,
   .project-3d-shell:hover .project-flip-inner,
   .project-3d-shell:focus-within .project-flip-inner {
     transform: none;
+    filter: none;
   }
 }
 
