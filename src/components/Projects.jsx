@@ -8,45 +8,51 @@ function Projects({ active }) {
     {
       title: "Ghar-Contractor",
       link: "https://project-gc.vercel.app/",
-      subtitle1: "ReactJS",
+      description: "A modern contractor discovery platform with clean booking flows and responsive UI.",
       subtitle2: "Web",
+      stack: ["React", "UI Design", "Responsive"],
       category: "web",
     },
     {
       title: "BoardGame",
       link: "https://github.com/Kartikpawar143/BoardGame",
-      subtitle1:
-        "DevSecOps CI/CD Pipeline Using K8s, Jenkins, SonarQube & Prometheus",
+      description:
+        "A production-style DevSecOps pipeline with automation, security scanning, and observability.",
       subtitle2: "DevSecOps",
+      stack: ["Kubernetes", "Jenkins", "Prometheus"],
       category: "devops",
     },
     {
       title: "Full-Stack Chat App",
       link: "https://github.com/Kartikpawar143/Full-Stack-ChatApp.git",
-      subtitle1: "Kubernetes Chat Application",
-      subtitle2: "Kubernetes",
+      description: "Containerized real-time chat application deployed with scalable cloud-native patterns.",
+      subtitle2: "Cloud",
+      stack: ["Node.js", "MongoDB", "Kubernetes"],
       category: "cloud",
     },
     {
       title: "Core Java",
       link:
         "https://github.com/Kartikpawar143/Coding-Related/tree/main/Core%20Java%20codes",
-      subtitle1: "Java",
-      subtitle2: "Project",
+      description: "A practical Java collection focused on core concepts, OOP, and coding fundamentals.",
+      subtitle2: "Coding",
+      stack: ["Core Java", "OOP", "DSA"],
       category: "coding",
     },
     {
       title: "Django Notes App",
       link: "https://github.com/Kartikpawar143/Django-notes-app",
-      subtitle1: "Django Notes App",
-      subtitle2: "Docker",
+      description: "Secure note-taking app with backend logic, auth-ready structure, and container support.",
+      subtitle2: "DevOps",
+      stack: ["Django", "Docker", "PostgreSQL"],
       category: "devops",
     },
     {
       title: "Static Website Hosting",
       link: "https://github.com/Kartikpawar143/AWS-S3",
-      subtitle1: "AWS-S3",
-      subtitle2: "AWS",
+      description: "Cloud hosting workflow for static assets with lightweight deployment and global delivery.",
+      subtitle2: "Cloud",
+      stack: ["AWS S3", "CloudFront", "IAM"],
       category: "cloud",
     },
   ];
@@ -62,17 +68,21 @@ function Projects({ active }) {
         <h2 className="h2 article-title">Projects</h2>
       </header>
 
-      {/* Filter Buttons */}
+      <p className="project-intro">
+        Crafted builds across web, cloud, and DevOps with a focus on performance, usability, and deployment quality.
+      </p>
+
       <div className="project-filters">
         {[
-          { key: "all", label: "ALL" },
+          { key: "all", label: "All" },
           { key: "cloud", label: "Cloud" },
           { key: "devops", label: "DevOps" },
-          { key: "web", label: "Web Development" },
-          { key: "coding", label: "Coding" }
+          { key: "web", label: "Web" },
+          { key: "coding", label: "Coding" },
         ].map((cat) => (
           <button
             key={cat.key}
+            type="button"
             className={filter === cat.key ? "active" : ""}
             onClick={() => setFilter(cat.key)}
           >
@@ -81,11 +91,16 @@ function Projects({ active }) {
         ))}
       </div>
 
+      <p className="project-count">{filteredProjects.length} projects</p>
+
       <ul className="project-list">
         {filteredProjects.map((project, index) => (
-          <ProjectCard key={index} {...project} />
+          <ProjectCard key={index} {...project} index={index + 1} />
         ))}
       </ul>
+      {filteredProjects.length === 0 && (
+        <p className="project-empty">No projects found for this category.</p>
+      )}
     </article>
   );
 }
