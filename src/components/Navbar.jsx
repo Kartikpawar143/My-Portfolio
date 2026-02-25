@@ -1,5 +1,5 @@
 function Navbar({ activePage, setActivePage }) {
-    const pages = ["about", "resume", "certifications", "projects", "blog", "contact"];
+    const pages = ["about", "projects", "resume", "certifications", "blog", "contact"];
   
     return (
       <nav className="navbar">

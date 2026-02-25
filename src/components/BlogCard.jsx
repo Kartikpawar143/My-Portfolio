@@ -7,7 +7,7 @@ function BlogCard({ icon, category, title, description, link }) {
       </div>
       <h3 className="blog-title">{title}</h3>
       <p className="blog-description">{description}</p>
-      <a href={link} className="blog-link">
+      <a href={link} className="blog-link" target="_blank" rel="noreferrer noopener">
         Read More
         <span className="arrow">→</span>
       </a>
