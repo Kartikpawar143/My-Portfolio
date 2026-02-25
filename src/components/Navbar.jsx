@@ -13,6 +13,8 @@ function Navbar({ activePage, setActivePage }) {
                     : "navbar-link"
                 }
                 onClick={() => setActivePage(page)}
+                type="button"
+                aria-current={activePage === page ? "page" : undefined}
               >
                 {page.charAt(0).toUpperCase() + page.slice(1)}
               </button>
