@@ -17,10 +17,10 @@ function Resume({ active }) {
   }, [active]);
 
   const skills = [
-    { name: "Web Development & Coding", width: "65%" },
-    { name: "DevOps", width: "80%" },
-    { name: "Cloud", width: "90%" },
-    { name: "Linux & Shell-Scripting", width: "75%" },
+    { name: "Cloud Architecture", width: "90%" },
+    { name: "CI/CD & Automation", width: "85%" },
+    { name: "Container Orchestration", width: "80%" },
+    { name: "Linux & Scripting", width: "78%" },
   ];
 
   return (
@@ -45,7 +45,7 @@ function Resume({ active }) {
             </h4>
             <span>2022 — 2026</span>
             <p className="timeline-text">
-              Pursuing BE in Information Technology.<br />CGPA - 8.90
+              B.E. in Information Technology. CGPA 8.90
             </p>
           </li>
 
@@ -54,7 +54,7 @@ function Resume({ active }) {
               Kai.Sau.G.F.Patil Jr. College
             </h4>
             <span>2020 — 2022</span>
-            <p className="timeline-text">Percentage - 77.83%</p>
+            <p className="timeline-text">Higher Secondary, 77.83%</p>
           </li>
 
           <li className="timeline-item">
@@ -62,7 +62,7 @@ function Resume({ active }) {
               Shri Mahavir English Medium School
             </h4>
             <span>2020</span>
-            <p className="timeline-text">Percentage - 62%</p>
+            <p className="timeline-text">Secondary, 62%</p>
           </li>
         </ol>
       </section>
@@ -80,14 +80,17 @@ function Resume({ active }) {
           <li className="timeline-item">
             <h4 className="h4 timeline-item-title">Neural Arc</h4>
             <span>Nov 2025 — Present</span>
-            <p className="timeline-text">Cloud DevOps Engineer</p>
+            <p className="timeline-text">
+              Cloud DevOps Engineer focused on pipeline automation and cloud
+              deployments.
+            </p>
           </li>
 
           <li className="timeline-item">
             <h4 className="h4 timeline-item-title">Coding Saavy</h4>
             <span>Dec 2024 — Jan 2025</span>
             <p className="timeline-text">
-              Internship on Web Development.
+              Web development internship focused on responsive UI and deploys.
             </p>
           </li>
 
@@ -97,7 +100,7 @@ function Resume({ active }) {
             </h4>
             <span>Aug 2024 — Jan 2025</span>
             <p className="timeline-text">
-              Internship on Cloud DevOps, Linux, Shell-Scripting.
+              Cloud DevOps internship covering Linux, scripting, and CI/CD.
             </p>
           </li>
         </ol>
@@ -117,7 +120,7 @@ function Resume({ active }) {
               <div className="skill-progress-bg">
                 <div
                   className="skill-progress-fill"
-                  data-width= {skill.width}
+                  data-width={skill.width}
                   ref={(el) => (skillRefs.current[index] = el)}
                 ></div>
               </div>

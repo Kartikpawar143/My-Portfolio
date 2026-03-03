@@ -16,7 +16,7 @@ function Sidebar() {
 
         <div className="info-content">
           <h1 className="name">Kartik Pawar</h1>
-          <p className="title">AWS & DevOps</p>
+          <p className="title">Cloud & DevOps Engineer</p>
         </div>
 
         <button

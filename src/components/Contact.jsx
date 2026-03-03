@@ -41,6 +41,9 @@ function Contact({ active }) {
       {/* Contact Form */}
       <section className="contact-form">
         <h3 className="h3 form-title">Get in Touch</h3>
+        <p className="contact-lead">
+          Tell me about your project or role. I typically respond within 24-48 hours.
+        </p>
 
         <form
           action="https://api.web3forms.com/submit"

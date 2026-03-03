@@ -7,23 +7,26 @@ function About() {
   
         <section className="about-text">
           <p>
-            <span className="typing-text">Cloud and DevOps Engineer</span>
+            <span className="typing-text">Cloud & DevOps Engineer</span>
           </p>
   
           <p>
-            <b>
-              🌐 Currently pursuing an Information Technology degree at
-              Savitribai Phule Pune University, I thrive on bridging the gap
-              between classroom concepts and real-world applications.
-              💡 Committed to continuous learning, innovation, and
-              problem-solving. 🌟 Let's connect to explore the dynamic
-              intersection of academia and IT excellence. Together, let's build
-              a future of technological innovation!
-            </b>
-            <br />
-            I enjoy turning complex paths into simple solutions through
-            automation.
+            I build cloud-native systems and DevOps pipelines that ship reliable releases. My focus is on automation, observability, and secure delivery.
           </p>
+
+          <p>
+            Currently pursuing a B.E. in Information Technology in Pune at Savitribai Phule Pune University, I blend academic foundations with hands-on work.
+          </p>
+        </section>
+
+        <section className="about-highlights">
+          <h3 className="h3">Focus Areas</h3>
+          <ul className="highlight-list">
+            <li>Cloud infrastructure and cost-aware architecture</li>
+            <li>CI/CD pipelines with security and quality gates</li>
+            <li>Containerized delivery on Kubernetes and Docker</li>
+            <li>System reliability, monitoring, and incident readiness</li>
+          </ul>
         </section>
   
         {/* Service Section */}
@@ -40,8 +43,8 @@ function About() {
               <div className="service-content-box">
                 <h4 className="h4 service-item-title">Cloud Services</h4>
                 <p className="service-item-text">
-                  Offers pay-as-you-go services for compute, storage, databases,
-                  AI, ML, IoT, and more across AWS and Azure platforms.
+                  Designing scalable cloud systems with cost-aware architecture
+                  on AWS and Azure.
                 </p>
               </div>
             </li>
@@ -54,8 +57,8 @@ function About() {
               <div className="service-content-box">
                 <h4 className="h4 service-item-title">DevOps</h4>
                 <p className="service-item-text">
-                  DevOps integrates and automates software development and IT
-                  operations for faster delivery.
+                  CI/CD automation, security gates, and release workflows that
+                  keep teams shipping confidently.
                 </p>
               </div>
             </li>
@@ -70,8 +73,8 @@ function About() {
                   Linux & Shell Scripting
                 </h4>
                 <p className="service-item-text">
-                  Most programming languages support Linux directly or through
-                  community-driven ports.
+                  Linux administration and shell scripting for reliable
+                  automation and troubleshooting.
                 </p>
               </div>
             </li>
@@ -86,8 +89,8 @@ function About() {
                   Web Development & Coding
                 </h4>
                 <p className="service-item-text">
-                  The process of creating, building, and maintaining websites
-                  and web applications.
+                  Practical web engineering for dashboards, tooling, and
+                  internal platforms.
                 </p>
               </div>
             </li>

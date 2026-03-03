@@ -8,24 +8,24 @@ function Projects({ active }) {
     {
       title: "Ghar-Contractor",
       link: "https://project-gc.vercel.app/",
-      description: "A modern contractor discovery platform with clean booking flows and responsive UI.",
-      subtitle2: "Web",
-      stack: ["React", "UI Design", "Responsive"],
+      description: "Contractor discovery platform with clean booking flow and responsive UI.",
+      subtitle2: "Product",
+      stack: ["React", "UX", "Responsive"],
       category: "web",
     },
     {
       title: "BoardGame",
       link: "https://github.com/Kartikpawar143/BoardGame",
       description:
-        "A production-style DevSecOps pipeline with automation, security scanning, and observability.",
-      subtitle2: "DevSecOps",
+        "Production-style DevSecOps pipeline with automation, security scanning, and observability.",
+      subtitle2: "Platform",
       stack: ["Kubernetes", "Jenkins", "Prometheus"],
       category: "devops",
     },
     {
       title: "Full-Stack Chat App",
       link: "https://github.com/Kartikpawar143/Full-Stack-ChatApp.git",
-      description: "Containerized real-time chat application deployed with scalable cloud-native patterns.",
+      description: "Containerized real-time chat app deployed with scalable cloud-native patterns.",
       subtitle2: "Cloud",
       stack: ["Node.js", "MongoDB", "Kubernetes"],
       category: "cloud",
@@ -42,7 +42,7 @@ function Projects({ active }) {
     {
       title: "Django Notes App",
       link: "https://github.com/Kartikpawar143/Django-notes-app",
-      description: "Secure note-taking app with backend logic, auth-ready structure, and container support.",
+      description: "Secure notes app with backend logic, auth-ready structure, and container support.",
       subtitle2: "DevOps",
       stack: ["Django", "Docker", "PostgreSQL"],
       category: "devops",
@@ -50,7 +50,7 @@ function Projects({ active }) {
     {
       title: "Static Website Hosting",
       link: "https://github.com/Kartikpawar143/AWS-S3",
-      description: "Cloud hosting workflow for static assets with lightweight deployment and global delivery.",
+      description: "Static hosting workflow with lightweight deployment and global delivery.",
       subtitle2: "Cloud",
       stack: ["AWS S3", "CloudFront", "IAM"],
       category: "cloud",
@@ -69,7 +69,8 @@ function Projects({ active }) {
       </header>
 
       <p className="project-intro">
-        Crafted builds across web, cloud, and DevOps with a focus on performance, usability, and deployment quality.
+        Selected builds across web, cloud, and DevOps with a focus on reliability,
+        clean delivery, and measurable impact.
       </p>
 
       <div className="project-filters">
