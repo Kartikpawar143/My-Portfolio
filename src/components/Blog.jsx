@@ -4,6 +4,14 @@ import BlogCard from "./BlogCard";
 function Blog({ active }) {
   const blogs = [
     {
+      icon: "🔄",
+      category: "Azure DevOps",
+      title: "Azure DevOps CI/CD + GitOps Documentation",
+      description:
+        "Step-by-step documentation for building CI/CD in Azure DevOps and integrating GitOps workflows for reliable Kubernetes deployments and change traceability.",
+      link: "https://medium.com/@kartikpawar1290/azure-devops-ci-cd-gitops-documentation-f1a85e3e33ce"
+    },
+    {
       icon: "☁️",
       category: "AWS",
       title: "AWS X-Ray Integration Documentation",

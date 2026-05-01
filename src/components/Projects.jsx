@@ -6,6 +6,15 @@ function Projects({ active }) {
 
   const projects = [
     {
+      title: "Cloud-Native CI/CD + GitOps Project",
+      link: "https://github.com/Kartikpawar143/Voting-App-Azure-DevOps-Project.git",
+      description:
+        "End-to-end cloud-native delivery pipeline using Azure DevOps for CI/CD and GitOps-driven Kubernetes deployments for consistent, auditable releases.",
+      subtitle2: "DevOps",
+      stack: ["Azure DevOps", "GitOps", "K8s", "CI/CD"],
+      category: "devops",
+    },
+    {
       title: "Ghar-Contractor",
       link: "https://project-gc.vercel.app/",
       description: "Contractor discovery platform with clean booking flow and responsive UI.",

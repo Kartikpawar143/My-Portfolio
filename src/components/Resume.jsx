@@ -78,16 +78,16 @@ function Resume({ active }) {
 
         <ol className="timeline-list">
           <li className="timeline-item">
-            <h4 className="h4 timeline-item-title">Neural Arc</h4>
-            <span>Nov 2025 — Present</span>
+            <h4 className="h4 timeline-item-title">Neural Arc (Internship)</h4>
+            <span>Nov 2025 — Feb 2026</span>
             <p className="timeline-text">
-              Cloud DevOps Engineer focused on pipeline automation and cloud
+              Cloud DevOps internship focused on pipeline automation and cloud
               deployments.
             </p>
           </li>
 
           <li className="timeline-item">
-            <h4 className="h4 timeline-item-title">Coding Saavy</h4>
+            <h4 className="h4 timeline-item-title">Coding Saavy (Internship)</h4>
             <span>Dec 2024 — Jan 2025</span>
             <p className="timeline-text">
               Web development internship focused on responsive UI and deploys.
@@ -96,7 +96,7 @@ function Resume({ active }) {
 
           <li className="timeline-item">
             <h4 className="h4 timeline-item-title">
-              Borgward Technology India Pvt Ltd
+              Borgward Technology India Pvt Ltd (Internship)
             </h4>
             <span>Aug 2024 — Jan 2025</span>
             <p className="timeline-text">
