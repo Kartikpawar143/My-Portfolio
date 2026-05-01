@@ -1,6 +1,5 @@
 import BlogCard from "./BlogCard";
 
-
 function Blog({ active }) {
   const blogs = [
     {
