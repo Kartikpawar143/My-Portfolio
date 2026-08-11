@@ -11,21 +11,25 @@ function About() {
           </p>
   
           <p>
-            I build cloud-native systems and DevOps pipelines that ship reliable releases. My focus is on automation, observability, and secure delivery.
+            I build secure, scalable, and automated cloud infrastructure using AWS and modern DevOps practices.
           </p>
 
           <p>
-            Currently pursuing a B.E. in Information Technology in Pune at Savitribai Phule Pune University, I blend academic foundations with hands-on work.
+            My focus is on CI/CD, containerization, cloud security, monitoring, and automation to deliver reliable applications.
+          </p>
+
+          <p>
+            B.E. in Information Technology graduate from Savitribai Phule Pune University, with hands-on experience in cloud and DevOps engineering.
           </p>
         </section>
 
         <section className="about-highlights">
           <h3 className="h3">Focus Areas</h3>
           <ul className="highlight-list">
-            <li>Cloud infrastructure and cost-aware architecture</li>
-            <li>CI/CD pipelines with security and quality gates</li>
-            <li>Containerized delivery on Kubernetes and Docker</li>
-            <li>System reliability, monitoring, and incident readiness</li>
+            <li>Cloud Infrastructure & AWS</li>
+            <li>CI/CD & DevSecOps</li>
+            <li>Docker & Kubernetes</li>
+            <li>Monitoring & Reliability</li>
           </ul>
         </section>
   
@@ -41,10 +45,10 @@ function About() {
               </div>
   
               <div className="service-content-box">
-                <h4 className="h4 service-item-title">Cloud Services</h4>
+                <h4 className="h4 service-item-title">Cloud & Infrastructure</h4>
                 <p className="service-item-text">
-                  Designing scalable cloud systems with cost-aware architecture
-                  on AWS and Azure.
+                  Building scalable and secure cloud environments using AWS
+                  and infrastructure automation.
                 </p>
               </div>
             </li>
@@ -55,10 +59,10 @@ function About() {
               </div>
   
               <div className="service-content-box">
-                <h4 className="h4 service-item-title">DevOps</h4>
+                <h4 className="h4 service-item-title">DevOps & CI/CD</h4>
                 <p className="service-item-text">
-                  CI/CD automation, security gates, and release workflows that
-                  keep teams shipping confidently.
+                  Automating builds, testing, security scanning, and
+                  deployments with modern CI/CD tools.
                 </p>
               </div>
             </li>
@@ -70,10 +74,10 @@ function About() {
   
               <div className="service-content-box">
                 <h4 className="h4 service-item-title">
-                  Linux & Shell Scripting
+                  Linux & Automation
                 </h4>
                 <p className="service-item-text">
-                  Linux administration and shell scripting for reliable
+                  Managing Linux systems and using Shell scripting for
                   automation and troubleshooting.
                 </p>
               </div>
@@ -86,11 +90,11 @@ function About() {
   
               <div className="service-content-box">
                 <h4 className="h4 service-item-title">
-                  Web Development & Coding
+                  Cloud Security & DevSecOps
                 </h4>
                 <p className="service-item-text">
-                  Practical web engineering for dashboards, tooling, and
-                  internal platforms.
+                  Integrating security and quality checks into CI/CD pipelines
+                  using tools like Trivy and SonarQube.
                 </p>
               </div>
             </li>

@@ -1,6 +1,24 @@
 function Certifications({ active }) {
     const certifications = [
       {
+        title: "Claude Code",
+        issuer: "Anthropic",
+        image: "/assets/images/certificates/Claude Code Certificate.png",
+        link: "https://verify.skilljar.com/c/u2w4a7kyjyqv",
+        description:
+          "Claude Code certification covering AI-assisted development workflows and coding productivity.",
+        badges: ["Claude Code", "AI Coding", "Development"],
+      },
+      {
+        title: "Claude",
+        issuer: "Anthropic",
+        image: "/assets/images/certificates/Claude Certificate.png",
+        link: "https://verify.skilljar.com/c/4ifmt9df4grp",
+        description:
+          "Claude certification covering applied AI capabilities, prompting, and practical usage.",
+        badges: ["Claude", "Generative AI", "Prompting"],
+      },
+      {
         title: "OCI Certified DevOps Professional",
         issuer: "Oracle",
         date: "September 04, 2025",
@@ -39,7 +57,54 @@ function Certifications({ active }) {
           "Linux fundamentals covering CLI operations, process management, and shell scripting.",
         badges: ["Linux", "System Administration", "Command Line"],
       },
+      {
+        title: "Introduction to GitOps",
+        issuer: "Linux Foundation",
+        date: "July 21, 2025",
+        image: "/assets/images/certificates/Introduction to GitOps.png",
+        description:
+          "GitOps fundamentals covering declarative infrastructure, version-controlled operations, and Kubernetes delivery workflows.",
+        badges: ["GitOps", "Kubernetes", "DevOps"],
+      },
+      {
+        title: "Getting Started with OpenTofu",
+        issuer: "Linux Foundation",
+        date: "July 07, 2025",
+        image: "/assets/images/certificates/OpenTofu.png",
+        description:
+          "OpenTofu fundamentals for infrastructure as code, provisioning, and reusable configuration management.",
+        badges: ["OpenTofu", "IaC", "Linux Foundation"],
+      },
     ];
+
+    const renderCertificatePreview = (cert) => {
+      const preview = cert.image ? (
+        <img
+          src={cert.image}
+          alt={cert.title}
+          className="certification-img"
+        />
+      ) : (
+        <div className="certification-pdf-preview" aria-label={`${cert.title} PDF`}>
+          <span>PDF</span>
+        </div>
+      );
+
+      if (!cert.link && !cert.file) {
+        return preview;
+      }
+
+      return (
+        <a
+          href={cert.link || cert.file}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="certification-preview-link"
+        >
+          {preview}
+        </a>
+      );
+    };
   
     return (
       <article className={active ? "certifications active" : "certifications"}>
@@ -52,16 +117,12 @@ function Certifications({ active }) {
             {certifications.map((cert, index) => (
               <div className="certification-item" key={index}>
                 <div className="certification-image-box">
-                  <img
-                    src={cert.image}
-                    alt={cert.title}
-                    className="certification-img"
-                  />
+                  {renderCertificatePreview(cert)}
                 </div>
   
                 <div className="certification-content-box">
-                  {cert.link ? (
-                    <a href={cert.link} target="_blank" rel="noopener noreferrer">
+                  {cert.link || cert.file ? (
+                    <a href={cert.link || cert.file} target="_blank" rel="noopener noreferrer">
                       <h4 className="h4 certification-item-title">
                         {cert.title}
                       </h4>
@@ -73,9 +134,11 @@ function Certifications({ active }) {
                   )}
   
                   <p className="certification-issuer">{cert.issuer}</p>
-                  <p className="certification-date">
-                    Completed: {cert.date}
-                  </p>
+                  {cert.date && (
+                    <p className="certification-date">
+                      Completed: {cert.date}
+                    </p>
+                  )}
                   <p className="certification-description">
                     {cert.description}
                   </p>
