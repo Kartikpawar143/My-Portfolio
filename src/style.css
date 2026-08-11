@@ -1012,6 +1012,24 @@ main {
   transform: scale(1.1);
 }
 
+.certification-preview-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.certification-pdf-preview {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(244, 184, 96, 0.25), rgba(17, 25, 22, 0.9));
+  color: var(--white-2);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
 .certification-content-box {
   flex: 1;
 }

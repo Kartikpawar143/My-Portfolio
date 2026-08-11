@@ -4,6 +4,14 @@ import BlogCard from "./BlogCard";
 function Blog({ active }) {
   const blogs = [
     {
+      icon: "📊",
+      category: "Monitoring",
+      title: "Infrastructure Monitoring & Alerting Setup",
+      description:
+        "Infrastructure monitoring and alerting setup using Prometheus, Grafana, and Alertmanager for observability and incident response.",
+      link: "https://medium.com/@kartikpawar1290/infrastructure-monitoring-alerting-setup-using-prometheus-grafana-and-alertmanager-0d2281dc9348"
+    },
+    {
       icon: "🔄",
       category: "Azure DevOps",
       title: "Azure DevOps CI/CD + GitOps Documentation",

@@ -17,10 +17,10 @@ function Resume({ active }) {
   }, [active]);
 
   const skills = [
-    { name: "Cloud Architecture", width: "90%" },
+    { name: "Cloud Architecture", width: "83%" },
     { name: "CI/CD & Automation", width: "85%" },
     { name: "Container Orchestration", width: "80%" },
-    { name: "Linux & Scripting", width: "78%" },
+    { name: "Linux & Scripting", width: "90%" },
   ];
 
   return (
@@ -45,7 +45,7 @@ function Resume({ active }) {
             </h4>
             <span>2022 — 2026</span>
             <p className="timeline-text">
-              B.E. in Information Technology. CGPA 8.90
+              B.E. in Information Technology. CGPA 7.54
             </p>
           </li>
 
