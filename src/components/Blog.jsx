@@ -4,6 +4,38 @@ import BlogCard from "./BlogCard";
 function Blog({ active }) {
   const blogs = [
     {
+      icon: "📝",
+      category: "AWS",
+      title: "WordPress Deployment on AWS EC2 with Amazon RDS MySQL",
+      description:
+        "A walkthrough of deploying WordPress on an AWS EC2 instance and connecting it to an Amazon RDS MySQL database.",
+      link: "https://medium.com/@kartikpawar1290/wordpress-deployment-on-aws-ec2-with-amazon-rds-mysql-020f99a955bb"
+    },
+    {
+      icon: "🖥️",
+      category: "Linux",
+      title: "Installing and Configuring Cockpit on RHEL 9.8",
+      description:
+        "How to install and configure Cockpit on RHEL 9.8 for browser-based Linux server management.",
+      link: "https://medium.com/@kartikpawar1290/installing-and-configuring-cockpit-on-rhel-9-8-d6fe83c0440e"
+    },
+    {
+      icon: "🚨",
+      category: "Monitoring",
+      title: "Install and Configure Nagios Core 4.5.13 on RHEL 9",
+      description:
+        "A practical guide to installing Nagios Core 4.5.13 on RHEL 9 and configuring infrastructure monitoring.",
+      link: "https://medium.com/@kartikpawar1290/install-and-configure-nagios-core-4-5-13-on-rhel-9-d2d6cbfc93a1"
+    },
+    {
+      icon: "📈",
+      category: "Monitoring",
+      title: "Centralized Logging on RHEL 9 with Loki, Promtail, and Grafana",
+      description:
+        "Build a centralized logging setup on RHEL 9 using Promtail to ship logs to Loki and Grafana to explore them.",
+      link: "https://medium.com/@kartikpawar1290/building-a-centralized-logging-system-on-rhel-9-with-loki-promtail-grafana-727371bba24c"
+    },
+    {
       icon: "📊",
       category: "Monitoring",
       title: "Infrastructure Monitoring & Alerting Setup",
